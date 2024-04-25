@@ -11,11 +11,11 @@ def create_table(connection):
 
 def show_tasks(connection):
     cur = connection.cursor()
-    cur.execute("""SELECT task FROM task""")
+    cur.execute("""SELECT rowid, task FROM task""")
     result = cur.fetchall()
 
     for row in result:
-        print(row[0])
+        print(str(row[0]) + " - " + row[1])
 
 
 
@@ -26,19 +26,22 @@ def add_task(connection):
        print("Back to menu")
     else:
         cur = connection.cursor()
-        cur.execute("""INSERT INTO task(task) VALUES(?)""", {task,})
+        cur.execute("""INSERT INTO task(task) VALUES(?)""", (task,))
+        connection.commit()
         print("Task added!")
 
 
-def delete_task():
-    # task_index = int(input("Enter the index of the task to be deleted: "))
-    #
-    # if task_index < 0 or task_index > len(tasks) - 1:
-    #     print("A task with this index does not exist")
-    #     return
-    #
-    # tasks.pop(task_index)
-    print("Task deleted!")
+def delete_task(connection):
+    task_index = int(input("Enter the index of the task to be deleted: "))
+
+    cur = connection.cursor()
+    rows_deleted = cur.execute("""DELETE FROM task WHERE rowid=?""", (task_index,)).rowcount
+    connection.commit()
+
+    if rows_deleted != 0:
+        print("Task deleted!")
+    else:
+        print("A task with this index does not exist")
 
 create_table(connection)
 
@@ -59,8 +62,9 @@ while True:
         add_task(connection)
 
     if user_choice == 3:
-        delete_task()
+        delete_task(connection)
 
     if user_choice == 4:
         break
 
+connection.close()
