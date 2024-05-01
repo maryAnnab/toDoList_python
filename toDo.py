@@ -11,12 +11,11 @@ def create_table(connection):
 
 def show_tasks(connection):
     cur = connection.cursor()
-    cur.execute("""SELECT rowid, task FROM task""")
+    cur.execute("""SELECT task FROM task""")
     result = cur.fetchall()
 
-    for row in result:
-        print(str(row[0]) + " - " + row[1])
-
+    for i, row in enumerate(result, start=1):
+        print(str(i) + " - " + row[0])
 
 
 def add_task(connection):
@@ -32,16 +31,24 @@ def add_task(connection):
 
 
 def delete_task(connection):
+    cur = connection.cursor()
+    cur.execute("""SELECT rowid, task FROM task""")
+    result = cur.fetchall()
+
+    for i, row in enumerate(result, start=1):
+        print(str(row[0]) + " - " + row[1])
+
     task_index = int(input("Enter the index of the task to be deleted: "))
 
-    cur = connection.cursor()
-    rows_deleted = cur.execute("""DELETE FROM task WHERE rowid=?""", (task_index,)).rowcount
+    cur.execute("""DELETE FROM task WHERE rowid=?""", (task_index,))
+    rows_deleted = cur.rowcount
     connection.commit()
 
     if rows_deleted != 0:
         print("Task deleted!")
     else:
         print("A task with this index does not exist")
+
 
 create_table(connection)
 
