@@ -19,11 +19,13 @@ you can manage your tasks well.
  3. Delete task
  4. Edit task
  5. Leave
+
 -The user can input their choice by selecting the number corresponding to the action they want to perform.
+
 -Follow the on-screen instructions to add, delete, or edit tasks.
 
-###### Instruction for end users
 
+##### Introduction for the end user
 1. Press nr 2 to add your new task
 2. Next, write the name of your new task and push the enter button
 3. Put nr 1 to see your tasks list
@@ -45,10 +47,3 @@ Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
 
 ######## Feel free to contribute and improve the 
 functionality. Thank you!
-
-
-
-
-
-
-
