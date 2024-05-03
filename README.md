@@ -1,18 +1,56 @@
-# Python To-Do project with SQLite databases
+# Python To-Do List Project
 
-## To-Do project written in Python store and manage the task
+## This is a to-do list project written in Python that utilizes SQLite database to store and organise tasks.
 
-This project is an example app written in Python that creates and stores a 'to-do' list in a secure and lightweight database like SQLite. 
-There are functions such as adding and removing your tasks so you can manage your tasks.
+This project is an example app written in Python that creates and stores a 'to-do' list in a flexible and 
+lightweight database like SQLite. There are functions such as adding, editing and removing your tasks so 
+you can manage your tasks well.
 
-### The technologies used in the project are Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
+### Installation
+1. Clone the repository
+2. Install Python
+3. Install SQLite3
+4. Run the todo.py file
 
-#### Instruction for end users
+#### Usage
+1. The user can select from the following options:
+ -Show tasks
+ -Add task
+ -Delete task
+ -Edit task
+ -Leave
+2. The user can input their choice by selecting the number corresponding to the action they want to perform.
+3. Follow the on-screen instructions to add, delete, or edit tasks.
 
-1. Put nr 2 to add your new task
-2. Next write the name of your new task and put the enter button
+##### Instruction for end users
+
+1. Press nr 2 to add your new task
+2. Next, write the name of your new task and push the enter button
 3. Put nr 1 to see your tasks list
-4. Put nr 3 to delete your task 
-5. Next enter a specific task index and put the enter button
-6. Put nr 4 to leave from application
+4. Press nr 3 to delete your task 
+5. Next, enter a specific task index and put the enter button
+6. Put nr 4 to edit your task 
+7. Next, enter a specific task index exactly the one you want to edit and press the enter button
+8. Make changes and press enter
+9. Press nr 5 to leave the application
+
+###### Tech_core
+Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
+
+####### Database Structure
+The database todo.db has a single table task with a single column task.
+
+######## Author
+The author of the project is Anna Bielech.
+
+######### Feel free to contribute and improve the functionality. Thank you!
+
+########## License
+This project is licensed under the MIT license.
+
+
+
+
+
+
 
