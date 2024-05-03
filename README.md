@@ -13,16 +13,16 @@ you can manage your tasks well.
 4. Run the todo.py file
 
 #### Usage
-1. The user can select from the following options:
- -Show tasks
- -Add task
- -Delete task
- -Edit task
- -Leave
-2. The user can input their choice by selecting the number corresponding to the action they want to perform.
-3. Follow the on-screen instructions to add, delete, or edit tasks.
+-The user can select from the following options:
+ 1. Show tasks
+ 2. Add task
+ 3. Delete task
+ 4. Edit task
+ 5. Leave
+-The user can input their choice by selecting the number corresponding to the action they want to perform.
+-Follow the on-screen instructions to add, delete, or edit tasks.
 
-##### Instruction for end users
+###### Instruction for end users
 
 1. Press nr 2 to add your new task
 2. Next, write the name of your new task and push the enter button
@@ -34,19 +34,17 @@ you can manage your tasks well.
 8. Make changes and press enter
 9. Press nr 5 to leave the application
 
-###### Tech_core
-Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
-
-####### Database Structure
-The database todo.db has a single table task with a single column task.
-
-######## Author
+##### Author 
 The author of the project is Anna Bielech.
 
-######### Feel free to contribute and improve the functionality. Thank you!
-
-########## License
+###### License
 This project is licensed under the MIT license.
+
+####### Tech_core
+Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
+
+######## Feel free to contribute and improve the 
+functionality. Thank you!
 
 
 
