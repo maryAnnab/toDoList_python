@@ -2,41 +2,45 @@ import sqlite3
 
 connection = sqlite3.connect("todo.db")
 
+
 def create_table(connection):
     try:
         cur = connection.cursor()
-        cur.execute("""CREATE TABLE task(task text)""")
+        cur.execute("""CREATE TABLE task(task text, category text)""")
     except:
         pass
 
+
 def show_tasks(connection):
     cur = connection.cursor()
-    cur.execute("""SELECT task FROM task""")
+    cur.execute("""SELECT task, category FROM task""")
     result = cur.fetchall()
 
     for i, row in enumerate(result, start=1):
-        print(str(i) + " - " + row[0])
+        print(str(i) + " - " + row[0] + " - " + row[1])
 
 
 def add_task(connection):
     print("add task")
     task = input("Enter the content of your task: ")
+    category = input("Enter the category of your task (learning, working, freeTime): ")
+
     if task == "0":
-       print("Back to menu")
+        print("Back to menu")
     else:
         cur = connection.cursor()
-        cur.execute("""INSERT INTO task(task) VALUES(?)""", (task,))
+        cur.execute("""INSERT INTO task(task, category) VALUES(?, ?)""", (task, category))
         connection.commit()
         print("Task added!")
 
 
 def delete_task(connection):
     cur = connection.cursor()
-    cur.execute("""SELECT rowid, task FROM task""")
+    cur.execute("""SELECT rowid, task, category FROM task""")
     result = cur.fetchall()
 
     for i, row in enumerate(result, start=1):
-        print(str(row[0]) + " - " + row[1])
+        print(str(row[0]) + " - " + row[1] + " - " + row[2])
 
     task_index = int(input("Enter the index of the task to be deleted: "))
 
@@ -52,19 +56,19 @@ def delete_task(connection):
 
 def edit_task(connection):
     cur = connection.cursor()
-    cur.execute("""SELECT rowid, task FROM task""")
+    cur.execute("""SELECT rowid, task, category FROM task""")
     result = cur.fetchall()
 
     for i, row in enumerate(result, start=1):
-        print(str(row[0]) + " - " + row[1])
+        print(str(row[0]) + " - " + row[1] + " - " + row[2])
 
     task_index = int(input("Enter the index of the task to be edited: "))
     new_task_content = input("Enter the new content of your task: ")
+    new_category = input("Enter the new category of your task (learning, working, freeTime): ")
 
-    cur.execute("""UPDATE task SET task=? WHERE rowid=?""", (new_task_content, task_index))
+    cur.execute("""UPDATE task SET task=?, category=? WHERE rowid=?""", (new_task_content, new_category, task_index))
     rows_edited = cur.rowcount
     connection.commit()
-
 
     if rows_edited != 0:
         print("Task edited!")
