@@ -2,15 +2,14 @@
 
 ## This is a to-do list project written in Python that utilizes SQLite database to store and organise tasks.
 
-This project is an example app written in Python that creates and stores a 'to-do' list in a flexible and 
-lightweight database like SQLite. There are functions such as adding, editing and removing your tasks so 
-you can manage your tasks well.
+This project is an example app written in Python that creates and stores a 'to-do' list in a flexible and lightweight database like SQLite. There are features where 
+you can add, edit, delete and categorize tasks to make them easier to manage.
 
 ### Installation
-1. Clone the repository
+1. Clone the repository to your local machine.
 2. Install Python
 3. Install SQLite3
-4. Run the todo.py file
+4. Run the 'todo.py' file
 
 #### Usage
 -The user can select from the following options:
@@ -20,6 +19,8 @@ you can manage your tasks well.
  4. Edit task
  5. Leave
 
+-It allows users to organize all their tasks using the category feature.
+
 -The user can input their choice by selecting the number corresponding to the action they want to perform.
 
 -Follow the on-screen instructions to add, delete, or edit tasks.
@@ -27,13 +28,13 @@ you can manage your tasks well.
 
 ##### Introduction for the end user
 1. Press nr 2 to add your new task
-2. Next, write the name of your new task and push the enter button
+2. Next, write the name of your new task select categories and push the enter button
 3. Put nr 1 to see your tasks list
 4. Press nr 3 to delete your task 
-5. Next, enter a specific task index and put the enter button
+5. Next, enter a specific task and index and put the enter button
 6. Put nr 4 to edit your task 
-7. Next, enter a specific task index exactly the one you want to edit and press the enter button
-8. Make changes and press enter
+7. Next, enter a specific task index exactly the one you want to edit press the enter 
+8  Enter modify and select categories 
 9. Press nr 5 to leave the application
 
 ##### Author 
