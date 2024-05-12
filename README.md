@@ -9,7 +9,7 @@ you can add, edit, delete and categorize tasks to make them easier to manage.
 1. Clone the repository to your local machine.
 2. Install Python
 3. Install SQLite3
-4. Run the 'todo.py' file
+4. Run the 'app.py' file
 
 #### Usage
 -The user can select from the following options:
