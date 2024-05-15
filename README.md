@@ -1,9 +1,9 @@
-# Python To-Do List Project
+# Python Task Manager Application
 
-## This is a to-do list project written in Python that utilizes SQLite database to store and organise tasks.
+## This is a task manager application written in Python that utilizes SQLite database to store and organise tasks.
 
-This project is an example app written in Python that creates and stores a 'to-do' list in a flexible and lightweight database like SQLite. There are features where 
-you can add, edit, delete and categorize tasks to make them easier to manage.
+This task manager app written in Python that allows users to organise tasks in different categories. Users can 
+view tasks, add new tasks, delete tasks, edit tasks, and filter tasks by category, make them easier to manage.
 
 ### Installation
 1. Clone the repository to your local machine.
@@ -11,40 +11,26 @@ you can add, edit, delete and categorize tasks to make them easier to manage.
 3. Install SQLite3
 4. Run the 'app.py' file
 
-#### Usage
--The user can select from the following options:
- 1. Show tasks
- 2. Add task
- 3. Delete task
- 4. Edit task
- 5. Leave
+#### Features
+1. Show all tasks
+2. Add a new task
+3. Delete a task
+4. Edit a task
+5. Filter tasks by category
 
--It allows users to organize all their tasks using the category feature.
+##### Usage
+1. Select an option from the menu by entering the corresponding number.
+2. Follow the prompts to add, delete, edit, or filter tasks.
+3. To exit the application, select option 6.
 
--The user can input their choice by selecting the number corresponding to the action they want to perform.
-
--Follow the on-screen instructions to add, delete, or edit tasks.
-
-
-##### Introduction for the end user
-1. Press nr 2 to add your new task
-2. Next, write the name of your new task select categories and push the enter button
-3. Put nr 1 to see your tasks list
-4. Press nr 3 to delete your task 
-5. Next, enter a specific task and index and put the enter button
-6. Put nr 4 to edit your task 
-7. Next, enter a specific task index exactly the one you want to edit press the enter 
-8  Enter modify and select categories 
-9. Press nr 5 to leave the application
-
-##### Author 
+###### Author 
 The author of the project is Anna Bielech.
 
-###### License
+####### License
 This project is licensed under the MIT license.
 
-####### Tech_core
+######## Tech_core
 Python 3.11.5, SQLite database 3.41.2, OS Linux Ubuntu 22.04.4
 
-######## Feel free to contribute and improve the 
+######### Feel free to contribute and improve the 
 functionality. Thank you!
