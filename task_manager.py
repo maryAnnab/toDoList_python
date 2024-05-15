@@ -75,3 +75,16 @@ class TaskManager:
                 print("A task with this index does not exist")
         except (sqlite3.Error, ValueError) as e:
             print("An error occurred:", str(e))
+
+    def filter_tasks(self):
+        category = input("Enter the category to filter by: ")
+
+        try:
+            cur = self.db_instance.connection.cursor()
+            cur.execute("SELECT task, category FROM task WHERE category=?", (category,))
+            result = cur.fetchall()
+
+            for i, (task, category) in enumerate(result, start=1):
+                print(f"{i} - {task} - {category}")
+        except sqlite3.Error as e:
+            print("An error occurred:", str(e))
