@@ -10,7 +10,8 @@ while True:
     print("2. Add task")
     print("3. Delete task")
     print("4. Edit task")
-    print("5. Leave")
+    print("5. Filter tasks by category")
+    print("6. Leave")
 
     user_choice = input("Select number: ")
     print()
@@ -26,6 +27,8 @@ while True:
         elif user_choice == 4:
             task_manager.edit_task()
         elif user_choice == 5:
+            task_manager.filter_tasks()
+        elif user_choice == 6:
             break
         else:
             print("Invalid choice. Please try again.")
